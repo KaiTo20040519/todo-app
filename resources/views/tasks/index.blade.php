@@ -90,7 +90,8 @@
                                                         class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
                                                 </div>
                                                 <div>
-                                                    <form action="/tasks/{{ $item->id }}" method="post"
+                                                    <form onsubmit="return deleteTask();"
+                                                        action="/tasks/{{ $item->id }}" method="post"
                                                         class="inline-block text-gray-500 font-medium" role="menuitem"
                                                         tabindex="-1">
                                                         @csrf
@@ -119,6 +120,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        function deleteTask() {
+            if (confirm('本当に削除しますか？')) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
