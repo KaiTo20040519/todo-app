@@ -38,6 +38,15 @@
                             @enderror
                         </label>
 
+                        <label for="todo-select"></label>
+
+                        <select name="todo" id="todo-select">
+                            <option value="">洗濯</option>
+                            <option value="study">勉強</option>
+                            <option value="hobby">趣味</option>
+                        </select>
+
+
                         <button type="submit"
                             class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
                             追加する
