@@ -43,6 +43,9 @@ class TaskController extends Controller
         $task->name = $request->input('task_name');
         $task->save();
         return redirect('/tasks');
+
+        $task_category = $request->input('task_category');
+        dd($task_category);
     }
 
     /**
